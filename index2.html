@@ -1,0 +1,76 @@
+<head>
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=K2D);
+
+        body {
+            background-image: url(https://www.gifcen.com/wp-content/uploads/2022/04/wallpaper-gif-4.gif);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+            text-align: center;
+            color: aliceblue;            
+        }
+
+        h1 {
+            text-align: center;
+            color: aliceblue;
+            font-family: K2D;
+            position: absolute;
+            left: 32%;
+            top: 40%;
+            margin: auto;
+            margin-bottom: auto;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+
+    
+<script type="text/javascript">
+    var totalSeconds;		
+    var flash = false;	
+
+    function StartTimer()
+    {
+        totalSeconds = 10;
+
+        setInterval("Timer_Tick()", 1000);
+
+        var seconds = totalSeconds % 60;
+        var secondsTens = Math.floor(seconds / 10);
+        var secondsOnes = seconds % 10;
+        var minutes = Math.floor(totalSeconds / 60);
+
+        document.getElementById("Timer").innerHTML = "" + minutes + ":" + secondsTens + secondsOnes;
+    }
+
+    function Timer_Tick()
+    {
+        if (totalSeconds > 0)
+        {
+            totalSeconds--;	
+
+            var seconds = totalSeconds % 60;		
+            var secondsTens = Math.floor(seconds / 10);
+            var secondsOnes = seconds % 10;
+            var minutes = Math.floor(totalSeconds / 60);
+
+            document.getElementById("Timer").innerHTML = "" + minutes + ":" + secondsTens + secondsOnes;
+        }
+    }
+</script>
+
+</head>
+
+<body onload="StartTimer();">
+    <audio class="hidden" controls autoplay loop id="song">
+
+        <source src="https://cdn.discordapp.com/attachments/1029295365498880060/1037371513726324806/X2Download.app_-_P9d_x_AT_x_Thaidogg_-____Official_Audio_128_kbps.mp3" type="audio/mp3" />
+
+    </audio>
+    <span id="Timer"></span>
+    <h2>↑</h2>
+    <h1>429 Too Many Req Time Down You Can F5 To reload</h1>
+</body>

@@ -1,0 +1,47 @@
+<html >
+
+    <head>
+        <title>What the fuck did you do to get your rate limits?</title>
+
+        <script type="text/javascript">
+            var totalSeconds;		
+            var flash = false;	
+
+            function StartTimer()
+            {
+                totalSeconds = 10;
+
+                setInterval("Timer_Tick()", 1000);
+
+                var seconds = totalSeconds % 60;
+                var secondsTens = Math.floor(seconds / 10);
+                var secondsOnes = seconds % 10;
+                var minutes = Math.floor(totalSeconds / 60);
+
+                document.getElementById("Timer").innerHTML = "" + minutes + ":" + secondsTens + secondsOnes;
+            }
+
+            function Timer_Tick()
+            {
+                if (totalSeconds > 0)
+                {
+                    totalSeconds--;	
+
+                    var seconds = totalSeconds % 60;		
+                    var secondsTens = Math.floor(seconds / 10);
+                    var secondsOnes = seconds % 10;
+                    var minutes = Math.floor(totalSeconds / 60);
+
+                    document.getElementById("Timer").innerHTML = "" + minutes + ":" + secondsTens + secondsOnes;
+                }
+            }
+        </script>
+    </head>
+
+    <body onload="StartTimer();" style="background: #333; color: White; font-size: 100px; text-align: center;" >
+        <span id="Timer"></span>
+        <h1>↓</h1>
+        <a  href="https://marioblox.shop/">Time Down Pls F5 Click Here Broooo</a>
+    </body>
+
+</html>
